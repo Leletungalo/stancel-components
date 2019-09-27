@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/uploadform.esm.js"></script>
+  <script nomodule src="/build/uploadform.js"></script>
+</head>
+<body>
+    <image-card src="" ></image-card>
+   
+    <div id="lelethu">
+    </div>
+    <script>
+      async function getData() {
+        const response = await fetch("https://tutors123.herokuapp.com/testing#");
+        const jsonResponse = await response.json();
+        console.log(jsonResponse);
+        return jsonResponse;
+    }
+    const coco = document.querySelector("image-card");
+      getData().then((elle) => {
+        coco.setAttribute("src",elle.ThumbnailPath);
+        ////const tenp = document.createElement("div");
+       // tenp.innerHTML = elle[0].EmbedURL;
+       // coco.appendChild(tenp);
+        //elle.map((newelel) =>  {
+        //console.log(newelel.EmbedURL);
+        
+      /*  coco.setAttribute("src",newelel.thumbnailUrl);
+        coco.setAttribute("heading","Xhosa umfethu");
+        coco.setAttribute("prince", 1000);
+        coco.setAttribute("subHeading","kkknufge ygyufegyf");
+        coco.setAttribute("description",newelel.title);*/
+     //  } )
+      });
+  </script>
+</body>
+</html>

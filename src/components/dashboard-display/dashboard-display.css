@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+}
+.mainDiv .inputSearch{
+    display: inline-block;
+    width: 50%;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
