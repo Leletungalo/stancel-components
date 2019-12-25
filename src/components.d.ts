@@ -10,16 +10,39 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface BankForm {}
-  interface DashBoardDisplay {}
+  interface CreateCourse {
+    'open': boolean;
+  }
+  interface DeleteVideos {
+    'name': string;
+    'open': any;
+  }
+  interface DisplayVideo {
+    'heading': string;
+    'id': string;
+  }
+  interface HomePage {}
   interface ImageCard {
     'description': string;
     'heading': string;
     'prince': number;
     'src': string;
-    'subHeading': string;
+    'sub_heading': string;
   }
+  interface LoadingSpiner {}
   interface UpLoadForm {}
-  interface VideoPlayer {}
+  interface VideoAndNote {
+    'name': string;
+    'open': any;
+  }
+  interface VideoCard {
+    'description': string;
+    'heading': string;
+    'isloading': boolean;
+    'prince': number;
+    'src': string;
+    'sub_heading': string;
+  }
 }
 
 declare global {
@@ -31,10 +54,28 @@ declare global {
     new (): HTMLBankFormElement;
   };
 
-  interface HTMLDashBoardDisplayElement extends Components.DashBoardDisplay, HTMLStencilElement {}
-  var HTMLDashBoardDisplayElement: {
-    prototype: HTMLDashBoardDisplayElement;
-    new (): HTMLDashBoardDisplayElement;
+  interface HTMLCreateCourseElement extends Components.CreateCourse, HTMLStencilElement {}
+  var HTMLCreateCourseElement: {
+    prototype: HTMLCreateCourseElement;
+    new (): HTMLCreateCourseElement;
+  };
+
+  interface HTMLDeleteVideosElement extends Components.DeleteVideos, HTMLStencilElement {}
+  var HTMLDeleteVideosElement: {
+    prototype: HTMLDeleteVideosElement;
+    new (): HTMLDeleteVideosElement;
+  };
+
+  interface HTMLDisplayVideoElement extends Components.DisplayVideo, HTMLStencilElement {}
+  var HTMLDisplayVideoElement: {
+    prototype: HTMLDisplayVideoElement;
+    new (): HTMLDisplayVideoElement;
+  };
+
+  interface HTMLHomePageElement extends Components.HomePage, HTMLStencilElement {}
+  var HTMLHomePageElement: {
+    prototype: HTMLHomePageElement;
+    new (): HTMLHomePageElement;
   };
 
   interface HTMLImageCardElement extends Components.ImageCard, HTMLStencilElement {}
@@ -43,45 +84,90 @@ declare global {
     new (): HTMLImageCardElement;
   };
 
+  interface HTMLLoadingSpinerElement extends Components.LoadingSpiner, HTMLStencilElement {}
+  var HTMLLoadingSpinerElement: {
+    prototype: HTMLLoadingSpinerElement;
+    new (): HTMLLoadingSpinerElement;
+  };
+
   interface HTMLUpLoadFormElement extends Components.UpLoadForm, HTMLStencilElement {}
   var HTMLUpLoadFormElement: {
     prototype: HTMLUpLoadFormElement;
     new (): HTMLUpLoadFormElement;
   };
 
-  interface HTMLVideoPlayerElement extends Components.VideoPlayer, HTMLStencilElement {}
-  var HTMLVideoPlayerElement: {
-    prototype: HTMLVideoPlayerElement;
-    new (): HTMLVideoPlayerElement;
+  interface HTMLVideoAndNoteElement extends Components.VideoAndNote, HTMLStencilElement {}
+  var HTMLVideoAndNoteElement: {
+    prototype: HTMLVideoAndNoteElement;
+    new (): HTMLVideoAndNoteElement;
+  };
+
+  interface HTMLVideoCardElement extends Components.VideoCard, HTMLStencilElement {}
+  var HTMLVideoCardElement: {
+    prototype: HTMLVideoCardElement;
+    new (): HTMLVideoCardElement;
   };
   interface HTMLElementTagNameMap {
     'bank-form': HTMLBankFormElement;
-    'dash-board-display': HTMLDashBoardDisplayElement;
+    'create-course': HTMLCreateCourseElement;
+    'delete-videos': HTMLDeleteVideosElement;
+    'display-video': HTMLDisplayVideoElement;
+    'home-page': HTMLHomePageElement;
     'image-card': HTMLImageCardElement;
+    'loading-spiner': HTMLLoadingSpinerElement;
     'up-load-form': HTMLUpLoadFormElement;
-    'video-player': HTMLVideoPlayerElement;
+    'video-and-note': HTMLVideoAndNoteElement;
+    'video-card': HTMLVideoCardElement;
   }
 }
 
 declare namespace LocalJSX {
   interface BankForm extends JSXBase.HTMLAttributes<HTMLBankFormElement> {}
-  interface DashBoardDisplay extends JSXBase.HTMLAttributes<HTMLDashBoardDisplayElement> {}
+  interface CreateCourse extends JSXBase.HTMLAttributes<HTMLCreateCourseElement> {
+    'open'?: boolean;
+  }
+  interface DeleteVideos extends JSXBase.HTMLAttributes<HTMLDeleteVideosElement> {
+    'name'?: string;
+    'open'?: any;
+  }
+  interface DisplayVideo extends JSXBase.HTMLAttributes<HTMLDisplayVideoElement> {
+    'heading'?: string;
+    'id'?: string;
+  }
+  interface HomePage extends JSXBase.HTMLAttributes<HTMLHomePageElement> {}
   interface ImageCard extends JSXBase.HTMLAttributes<HTMLImageCardElement> {
     'description'?: string;
     'heading'?: string;
     'prince'?: number;
     'src'?: string;
-    'subHeading'?: string;
+    'sub_heading'?: string;
   }
+  interface LoadingSpiner extends JSXBase.HTMLAttributes<HTMLLoadingSpinerElement> {}
   interface UpLoadForm extends JSXBase.HTMLAttributes<HTMLUpLoadFormElement> {}
-  interface VideoPlayer extends JSXBase.HTMLAttributes<HTMLVideoPlayerElement> {}
+  interface VideoAndNote extends JSXBase.HTMLAttributes<HTMLVideoAndNoteElement> {
+    'name'?: string;
+    'open'?: any;
+  }
+  interface VideoCard extends JSXBase.HTMLAttributes<HTMLVideoCardElement> {
+    'description'?: string;
+    'heading'?: string;
+    'isloading'?: boolean;
+    'prince'?: number;
+    'src'?: string;
+    'sub_heading'?: string;
+  }
 
   interface IntrinsicElements {
     'bank-form': BankForm;
-    'dash-board-display': DashBoardDisplay;
+    'create-course': CreateCourse;
+    'delete-videos': DeleteVideos;
+    'display-video': DisplayVideo;
+    'home-page': HomePage;
     'image-card': ImageCard;
+    'loading-spiner': LoadingSpiner;
     'up-load-form': UpLoadForm;
-    'video-player': VideoPlayer;
+    'video-and-note': VideoAndNote;
+    'video-card': VideoCard;
   }
 }
 

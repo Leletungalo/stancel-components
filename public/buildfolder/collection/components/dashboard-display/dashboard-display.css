@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 75px;
+}
+
+nav .main-header{
+    font-size: 3rem;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #EE5690;
+}
+
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+}
+.mainDiv .inputSearch{
+    display: inline-block;
+    width: 50%;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}

@@ -4,38 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
-
   <script type="module" src="/build/uploadform.esm.js"></script>
   <script nomodule src="/build/uploadform.js"></script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    aside{
+        position: fixed;
+        background-color: rgb(64,64,64);
+        width: 13rem;
+        height: 100vh;
+        padding: 0 20px;
+        z-index: 10;
+    }
+    main{
+        height: 90vh;
+          margin-left: 13rem;
+          padding: 0 10px;
+      }
+  </style>
 </head>
 <body>
-    <image-card src="" ></image-card>
-   
-    <div id="lelethu">
-    </div>
+  <aside>
+    
+  </aside>
+  <main>
+    <nav style="height: 10vh;background-color: orangered;">
+      <h1>Home</h1>
+    </nav>
+    <display-video></display-video>
+  <!--<create-course open="true"></create-course> -->
     <script>
-      async function getData() {
-        const response = await fetch("https://tutors123.herokuapp.com/testing#");
-        const jsonResponse = await response.json();
-        console.log(jsonResponse);
-        return jsonResponse;
+      const main = document.querySelector("main");
+    const openThing = () =>{
+
+      const and = document.createElement("create-course");
+      console.log(and);
+      main.appendChild(and);
+      and.open = true;
     }
-    const coco = document.querySelector("image-card");
-      getData().then((elle) => {
-        coco.setAttribute("src",elle.ThumbnailPath);
-        ////const tenp = document.createElement("div");
-       // tenp.innerHTML = elle[0].EmbedURL;
-       // coco.appendChild(tenp);
-        //elle.map((newelel) =>  {
-        //console.log(newelel.EmbedURL);
-        
-      /*  coco.setAttribute("src",newelel.thumbnailUrl);
-        coco.setAttribute("heading","Xhosa umfethu");
-        coco.setAttribute("prince", 1000);
-        coco.setAttribute("subHeading","kkknufge ygyufegyf");
-        coco.setAttribute("description",newelel.title);*/
-     //  } )
-      });
-  </script>
+      const tutor = {
+        name: "lelethu",
+        surname: "surname",
+        email: "lelethungalo@gmail.com",
+        isTutor: true
+      }
+
+      const student = {
+        name: "lelethu",
+        surname: "surname",
+        email: "lelethungalo@gmail.com",
+        isTutor: false
+      }
+    </script>
+  </main>
 </body>
 </html>

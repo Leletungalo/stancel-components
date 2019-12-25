@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mainDiv{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: .5em 1em;
+    height: 90vh;
+    width: 100%;
+}
+
+.summary{
+    display: none;
+    background-color: blue;
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    height: 100px;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.heading{
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0.3em 0;
+}
+
+.subHeading{
+    display: inline-block;
+    margin: .3em;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.storeSearch{
+    width: 80%;
+    border-radius: 0.42em;
+    padding: 0.23em;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.storeSearch:active {
+    outline: none;
+}
+
+.storeSearchButton{
+    padding: 0.23em;
+    background-color: rgb(33, 182, 231);
+    color: white;
+    border-radius: 0.625em 0;
+    outline: none;
+    font-size: 1.5rem;
+}
+.seeMore{
+    display: inline-block;
+}
+
+.packagesContainer{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+
+loading-spiner{
+    margin: 20px 30px;
+}
+
+@media(max-width:650px){
+    .packagesContainer{
+        flex-flow: wrap;
+    }
+}

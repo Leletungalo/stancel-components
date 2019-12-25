@@ -1,0 +1,17 @@
+{
+  "entries": [
+    "components/dashboard-display/dashboard-display.js",
+    "components/displayVideos/display-videos.js",
+    "components/image-card/image-card.js",
+    "components/my-component/my-component.js",
+    "components/video-card/video-card.js",
+    "components/bank-form/bank-form.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.4.0",
+    "typescriptVersion": "3.6.2"
+  },
+  "collections": [],
+  "bundles": []
+}

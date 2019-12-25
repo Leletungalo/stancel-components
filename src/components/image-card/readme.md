@@ -13,7 +13,7 @@
 | `heading`     | `heading`     |             | `string` | `undefined` |
 | `prince`      | `prince`      |             | `number` | `undefined` |
 | `src`         | `src`         |             | `string` | `undefined` |
-| `subHeading`  | `sub-heading` |             | `string` | `undefined` |
+| `sub_heading` | `sub_heading` |             | `string` | `undefined` |
 
 
 ----------------------------------------------

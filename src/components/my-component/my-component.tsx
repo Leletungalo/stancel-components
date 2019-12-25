@@ -38,7 +38,8 @@ export class MyComponent {
   }
 
   render() {
-    return (<div>
+    return [
+    <div class="mainDiv">
       <nav class="FormNav">
       <h1 class="Heading">Upload you Form</h1>
       </nav>
@@ -70,6 +71,6 @@ export class MyComponent {
         </div>
         <input type="submit" value="uplaod" class="btn"/>
       </form>
-      </div>);
+    </div>,<div class="backDrop"></div>];
   }
 }
